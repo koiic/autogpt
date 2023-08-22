@@ -19,7 +19,7 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
     
-openai_api_key = st.sidebar.text_input('OpenAI API Key')
+openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 
 
 llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
